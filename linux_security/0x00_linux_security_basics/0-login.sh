@@ -1,2 +1,2 @@
 #!/bin/bash
-last -n 5 maroua
+sudo last -n 5 maroua
