@@ -1,2 +1,2 @@
 #!/bin/bash
-sudo ss -tuna
+sudo ss -antp
