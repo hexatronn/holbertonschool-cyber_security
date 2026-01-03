@@ -1,2 +1,2 @@
 #!/bin/bash
-nslookup -type=MX "$1" 8.8.8.8
+nslookup -type=mx $1
