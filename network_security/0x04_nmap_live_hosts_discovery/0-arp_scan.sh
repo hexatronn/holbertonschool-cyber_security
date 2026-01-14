@@ -1,2 +1,3 @@
 #!/bin/bash
-sudo nmap -sn -Pr 192.168.65.0/24
+SUBNET="$1"
+sudo nmap -sn -Pr "$SUBNET"
