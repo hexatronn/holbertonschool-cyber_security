@@ -1,0 +1,4 @@
+Frame 1000: 110 bytes on wire (880 bits), 110 bytes captured (880 bits) on interface eth0, id 0
+Ethernet II, Src: 52:56:00:00:00:02 (52:56:00:00:00:02), Dst: IPv6mcast_01 (33:33:00:00:00:01)
+Internet Protocol Version 6, Src: fe80::2, Dst: ff02::1
+
