@@ -1,4 +1,7 @@
 #!/usr/bin/python3
+"""
+Locates and replaces a string in the heap of a running process.
+"""
 
 import sys
 
