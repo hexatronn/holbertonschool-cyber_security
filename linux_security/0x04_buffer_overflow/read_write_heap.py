@@ -5,9 +5,11 @@ Locates and replaces a string in the heap of a running process.
 
 import sys
 
+
 def print_usage_and_exit():
     print("Usage: read_write_heap.py pid search_string replace_string")
     sys.exit(1)
+
 
 def main():
     if len(sys.argv) != 4:
@@ -50,20 +52,21 @@ def main():
             offset = heap_data.find(search_bytes)
 
             if offset == -1:
-                print(f"[ERROR] String '{search_string}' not found in the heap.")
+                print(f"[ERROR] '{search_string}' not found in heap.")
                 sys.exit(1)
-            
+
             target_address = heap_start + offset
-            
+
             mem_file.seek(target_address)
             mem_file.write(replace_bytes)
 
     except PermissionError:
-        print(f"[ERROR] Permission denied")
+        print("[ERROR] Permission denied")
         sys.exit(1)
     except Exception as e:
         print(f"[ERROR] Can't read/write {mem_filename}: {e}")
         sys.exit(1)
+
 
 if __name__ == "__main__":
     main()
