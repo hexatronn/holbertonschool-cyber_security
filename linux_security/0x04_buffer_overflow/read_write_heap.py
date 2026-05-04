@@ -1,4 +1,5 @@
 #!/usr/bin/python3
+
 import sys
 
 def print_usage_and_exit():
@@ -61,7 +62,7 @@ def main():
             print("[*] Write successful.")
 
     except PermissionError:
-        print(f"[ERROR] Permission denied. Run with sudo.")
+        print(f"[ERROR] Permission denied")
         sys.exit(1)
     except Exception as e:
         print(f"[ERROR] Can't read/write {mem_filename}: {e}")
