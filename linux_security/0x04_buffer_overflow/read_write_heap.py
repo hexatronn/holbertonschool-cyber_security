@@ -1,4 +1,4 @@
-#!/usr/bin/python3
+#!/usr/bin/env python3
 """
 Locates and replaces a string in the heap of a running process.
 """
@@ -31,7 +31,6 @@ def main():
                     start_str, end_str = address_range.split('-')
                     heap_start = int(start_str, 16)
                     heap_end = int(end_str, 16)
-                    print(f"[*] Found [heap]: {start_str} - {end_str}")
                     break
     except Exception as e:
         print(f"[ERROR] Can't open or parse {maps_filename}: {e}")
@@ -53,16 +52,11 @@ def main():
             if offset == -1:
                 print(f"[ERROR] String '{search_string}' not found in the heap.")
                 sys.exit(1)
-
-            print(f"[*] Found '{search_string}' at offset {hex(offset)}")
             
             target_address = heap_start + offset
-            print(f"[*] Writing '{replace_string}' to {hex(target_address)}")
             
             mem_file.seek(target_address)
             mem_file.write(replace_bytes)
-            
-            print("[*] Write successful.")
 
     except PermissionError:
         print(f"[ERROR] Permission denied")
