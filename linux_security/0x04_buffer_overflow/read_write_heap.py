@@ -61,7 +61,7 @@ def main():
             print("[*] Write successful.")
 
     except PermissionError:
-        print(f"[ERROR] Permission denied")
+        print(f"[ERROR] Permission denied. Run with sudo.")
         sys.exit(1)
     except Exception as e:
         print(f"[ERROR] Can't read/write {mem_filename}: {e}")
