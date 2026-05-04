@@ -1,4 +1,4 @@
-#!/usr/bin/env python3
+#!/usr/bin/python3
 """
 Locates and replaces a string in the heap of a running process.
 """
